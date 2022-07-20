@@ -1,6 +1,10 @@
 import supertest from 'supertest';
 
-import { app } from '../src/app.js';
+import { app, server } from '../src/app.js';
+
+afterAll(() => {
+  server.close();
+});
 
 describe('Express app', () => {
   describe('Routing', () => {

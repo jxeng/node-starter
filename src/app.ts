@@ -17,8 +17,8 @@ app.use((_, res, _2) => {
   res.status(404).json({ error: 'NOT FOUND' });
 });
 
-app.listen(port, function () {
+const server = app.listen(port, function () {
   console.log(`Running at port: ${port}`);
 });
 
-export { app };
+export { app, server };

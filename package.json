@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development DOTENV_CONFIG_PATH=.env.development npm run start",
     "prod": "cross-env NODE_ENV=production DOTENV_CONFIG_PATH=.env.production npm run start",
-    "start": "nodemon -r dotenv/config build/app.js",
+    "start": "nodemon -r dotenv/config build/src/app.js",
     "clean": "rimraf coverage build",
     "prebuild": "npm run lint",
     "build": "npm run clean && tsc -p tsconfig.json",
